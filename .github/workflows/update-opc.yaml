@@ -2,7 +2,7 @@ name: update-opc
 
 on:
   schedule:
-  - cron: "*/30 * * * * *" # every 30 seconds
+  - cron: "*/1 * * * *" # every minute
 
 jobs:
 
