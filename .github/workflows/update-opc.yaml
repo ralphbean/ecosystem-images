@@ -3,6 +3,9 @@ name: update-opc
 on:
   schedule:
   - cron: "*/30 * * * *" # every 30 minutes
+  push:
+    paths-ignore:
+    - '**/Dockerfile'
 
 jobs:
 
