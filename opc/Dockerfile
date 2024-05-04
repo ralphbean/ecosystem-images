@@ -13,6 +13,8 @@ LABEL name="opc" \
       io.k8s.description="opc makes it easy to work with Tekton resources in OpenShift Pipelines. It is built on top of tkn and tkn-pac and expands their capablities to the functionality and user-experience that is available on OpenShift." \
       io.openshift.tags="pipelines,tekton"
 COPY --from=builder /app/opc /usr/bin
+RUN mkdir /licenses
+COPY LICENSE /licenses/.
 RUN microdnf install -y shadow-utils
 RUN groupadd -r -g 65532 nonroot && useradd --no-log-init -r -u 65532 -g nonroot nonroot
 USER 65532
