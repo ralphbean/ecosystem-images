@@ -116,7 +116,7 @@ spec:
       type: string
     - default: "snyk-secret"
       description: Snyk Token Secret Name.
-      name: snyk-secret      
+      name: snyk-secret
     results:
     - description: ""
       name: IMAGE_URL
