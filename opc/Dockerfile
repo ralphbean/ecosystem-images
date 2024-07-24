@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 RUN go build -buildvcs=false -mod=vendor -o /app/opc main.go
 
-FROM registry.access.redhat.com/ubi9/ubi-minimal:latest@sha256:bc552efb4966aaa44b02532be3168ac1ff18e2af299d0fe89502a1d9fabafbc5
+FROM registry.access.redhat.com/ubi9/ubi-minimal:latest@sha256:104cf11d890aeb7dd5728b7d7732e175a0e4018f1bb00d2faebcc8f6bf29bd52
 LABEL name="opc" \
       com.redhat.component="opc" \
       io.k8s.display-name="opc" \
